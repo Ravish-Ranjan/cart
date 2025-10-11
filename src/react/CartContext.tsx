@@ -2,7 +2,15 @@ import { createContext, useEffect, useState } from "react";
 
 import { Cart, type CartItem } from "../core/cart";
 
-export const CartContext = createContext<any>(null);
+export type CartContextType = {
+  cart: CartItem[];
+  addItem: (item: CartItem) => void;
+  removeItem: (id: string | number) => void;
+  clear: () => void;
+  total: number;
+};
+
+export const CartContext = createContext<CartContextType | null>(null);
 
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     const cartInstance = new Cart();
