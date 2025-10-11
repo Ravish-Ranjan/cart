@@ -1,2 +1,2 @@
-export * from "./useCart";
-export * from "./CartContext"
+export { useCart } from "./useCart";
+export { CartProvider } from "./CartContext";
