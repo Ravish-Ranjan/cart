@@ -30,12 +30,12 @@ export class Cart {
 		this.storage.setItem(this.key, JSON.stringify(cart));
 	}
 
-	addItem(item: CartItem) {
+	addItem(newItem: CartItem) {
 		const cart = this.getCart();
-		const exists = cart.find((item) => item.id === item.id);
+		const exists = cart.find((item) => item.id === newItem.id);
 		if (exists)
-			exists.quantity = (exists.quantity || 1) + (item.quantity || 1);
-		else cart.push({ ...item, quantity: item.quantity || 1 });
+			exists.quantity = (exists.quantity || 1) + (newItem.quantity || 1);
+		else cart.push({ ...newItem, quantity: newItem.quantity || 1 });
 		this.save(cart);
 	}
 
