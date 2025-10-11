@@ -1,0 +1,54 @@
+{
+	"name": "@ravishranjan/cart",
+	"version": "2.0.1",
+	"description": "A native cart system for web apps with optional React hooks",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/types.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup src --format esm,cjs --dts",
+		"dev": "tsup src --watch"
+	},
+	"keywords": [
+		"cart",
+		"react",
+		"localstorage",
+		"frontend",
+		"native"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		},
+		"./react": {
+			"import": "./dist/react/index.mjs",
+			"require": "./dist/react/index.js"
+		}
+	},
+	"author": "Ravish Ranjan",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/react": "^19.2.2",
+		"tsup": "^8.5.0"
+	},
+	"peerDependencies": {
+		"react": "^18.0.0 || ^19.0.0",
+		"react-dom": "^18.0.0 || ^19.0.0",
+		"typescript": "^5.9.3"
+	},
+	"peerDependenciesMeta": {
+		"react": {
+			"optional": true
+		},
+		"react-dom": {
+			"optional": true
+		},
+		"typescript": {
+			"optional": true
+		}
+	}
+}
