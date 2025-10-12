@@ -11,7 +11,7 @@
 	"scripts": {
 		"build": "tsup src --format esm,cjs --dts",
 		"dev": "tsup src --watch",
-		"build:cdn": "esbuild src/core/cart.ts --bundle --minify --format=iife --global-name=Cart --outfile=dist/cart.min.js",
+		"build:cdn": "esbuild src/core/cart.ts --bundle --minify --format=iife --global-name=Cart --platform=browser --outfile=dist/cart.min.js",
 		"prepare": "npm run build && npm run build:cdn"
 	},
 	"keywords": [
