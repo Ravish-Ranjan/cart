@@ -10,14 +10,17 @@
 	],
 	"scripts": {
 		"build": "tsup src --format esm,cjs --dts",
-		"dev": "tsup src --watch"
+		"dev": "tsup src --watch",
+		"build:cdn": "esbuild src/core/cart.ts --bundle --minify --format=iife --global-name=Cart --outfile=dist/cart.min.js",
+		"prepare": "npm run build && npm run build:cdn"
 	},
 	"keywords": [
 		"cart",
 		"react",
 		"localstorage",
 		"frontend",
-		"native"
+		"native",
+		"cdn"
 	],
 	"exports": {
 		".": {
@@ -31,16 +34,19 @@
 			"require": "./dist/react/index.js"
 		}
 	},
+	"unpkg": "dist/cart.min.js",
+	"jsdelivr": "dist/cart.min.js",
 	"author": "Ravish Ranjan",
 	"license": "ISC",
 	"devDependencies": {
 		"@types/react": "^19.2.2",
+		"esbuild": "^0.25.10",
 		"tsup": "^8.5.0",
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
-		"react": "^18.0.0 || ^19.0.0",
-		"react-dom": "^18.0.0 || ^19.0.0"
+		"react": ">=18.0.0",
+		"react-dom": "^18.0.0"
 	},
 	"peerDependenciesMeta": {
 		"react": {
