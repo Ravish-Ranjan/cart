@@ -1,6 +1,6 @@
 {
 	"name": "@ravishranjan/cart",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "A native cart system for web apps with optional React hooks",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
