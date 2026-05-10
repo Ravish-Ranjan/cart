@@ -2,14 +2,14 @@
 
 A **lightweight, native frontend cart system** with optional **React hooks**.
 
--   🧠 Works in **any JavaScript framework** — Vanilla JS, React, Vue, Svelte, etc.
--   ⚛️ Includes **React hooks** and `<CartProvider>` for easy React integration.
--   💾 Uses **localStorage** or **sessionStorage** for persistence.
--   🔌 Works both via **npm install** and **CDN** — no backend required.
+- Works in **any JavaScript framework** — Vanilla JS, React, Vue, Svelte, etc.
+- Includes **React hooks** and `<CartProvider>` for easy React integration.
+- Uses **localStorage** or **sessionStorage** for persistence.
+- Works both via **npm install** and **CDN** — no backend required.
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Option 1 — NPM
 
@@ -24,8 +24,11 @@ Use directly in your webpage:
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@ravishranjan/cart/dist/cart.min.js"></script>
 ```
+
 ---
+
 ## Cart item type
+
 ```ts
 interface CartItem {
 	id: string | number;
@@ -35,12 +38,13 @@ interface CartItem {
 	category?: string;
 	[key: string]: any;
 }
-``` 
+```
 
 ---
-## 🧩 Usage Examples
 
-### **1️⃣ Basic JavaScript (no framework)**
+## Usage Examples
+
+### **Basic JavaScript (no framework)**
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@ravishranjan/cart/dist/cart.min.js"></script>
@@ -61,7 +65,7 @@ interface CartItem {
 
 ---
 
-### **2️⃣ Node or Framework Projects (NPM install)**
+### **Node or Framework Projects (NPM install)**
 
 ```js
 import Cart from "@ravishranjan/cart";
@@ -87,7 +91,7 @@ console.log("Total Price:", cart.getTotal());
 
 ---
 
-### **3️⃣ React Usage (with hooks + context)**
+### **React Usage (with hooks + context)**
 
 #### Setup the Provider
 
@@ -127,7 +131,7 @@ export default function Shop() {
 				{items.map((item) => (
 					<li key={item.id}>
 						{item.name} - ₹{item.price}
-						<button onClick={() => removeItem(item.id)}>❌</button>
+						<button onClick={() => removeItem(item.id)}>X</button>
 					</li>
 				))}
 			</ul>
@@ -140,10 +144,10 @@ export default function Shop() {
 
 ---
 
-## ⚙️ Storage Options
+## Storage Options
 
-| Option      | Description                                              |
-| ----------- | -------------------------------------------------------- |
+| Option             | Description                                              |
+| ------------------ | -------------------------------------------------------- |
 | `"localStorage"`   | Persists cart across browser sessions (via localStorage) |
 | `"sessionStorage"` | Clears cart when the tab is closed (via sessionStorage)  |
 
@@ -163,7 +167,7 @@ or in React:
 
 ---
 
-## 🌍 CDN Quick Demo
+## CDN Quick Demo
 
 ```html
 <!DOCTYPE html>
@@ -184,7 +188,7 @@ or in React:
 
 ---
 
-## 🧱 API Summary
+## API Summary
 
 | API            | Type            | Description                     |
 | -------------- | --------------- | ------------------------------- |
@@ -194,6 +198,6 @@ or in React:
 
 ---
 
-## 🧾 License
+## License
 
 ISC © [Ravish Ranjan](https://npmjs.com/~ravishranjan)
