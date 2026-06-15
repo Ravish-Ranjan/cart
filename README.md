@@ -200,4 +200,4 @@ or in React:
 
 ## License
 
-ISC © [Ravish Ranjan](https://npmjs.com/~ravishranjan)
+GPL v2.0 © [Ravish Ranjan](https://npmjs.com/~ravishranjan)

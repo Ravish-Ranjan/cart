@@ -1,6 +1,6 @@
 {
 	"name": "@ravishranjan/cart",
-	"version": "2.1.6",
+	"version": "2.1.7",
 	"description": "A native cart system for web apps with optional React hooks",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
@@ -37,7 +37,7 @@
 	"unpkg": "dist/cart.min.js",
 	"jsdelivr": "dist/cart.min.js",
 	"author": "Ravish Ranjan",
-	"license": "ISC",
+	"license": "GPL-2.0",
 	"devDependencies": {
 		"@types/react": "^19.2.2",
 		"esbuild": "^0.25.10",
